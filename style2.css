@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  font-size: 0.939rem;
+  color: black;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+.header1 {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  z-index: 10;
+  /* border: 1px solid red; */
+}
+.nav {
+  display: flex;
+  /* border: 1px solid yellow; */
+  justify-content: flex-end;
+}
+.navlist {
+  display: flex;
+  padding: 1rem 3rem;
+}
+.navitem {
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+.navitem a {
+  margin: 0;
+  display: block;
+  width: 100%;
+}
+.navitem a:hover {
+  text-shadow: 0px 0px 1px black;
+}
+.navtoggle {
+  display: none;
+  /* position: absolute;
+  right: 0; */
+  width: 3rem;
+  padding: 0 1rem;
+}
+.navtoggle i {
+  color: rgb(252, 126, 126);
+}
+
+.navmenu span {
+  color: rgb(102, 101, 101);
+  display: none;
+}
+
+.main {
+  position: relative;
+  height: 100vh;
+  /* background-color: black; */
+  /* border: 2px solid red;
+  background-color: rgb(179, 179, 245); */
+}
+.main .background {
+  width: 100%;
+  height: 100%;
+}
+.background img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* display: none; */
+}
+.main .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* border: 2px solid red; */
+  z-index: 2;
+}
+.main .overlay h1 {
+  width: 100%;
+  text-align: center;
+  align-self: center;
+  font-size: 10vw;
+  background: url(./img/fire3.jpg);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  z-index: 10;
+}
+.button {
+  position: absolute;
+  transform: translate(calc(100vw / 2 - 3.4rem), -25vh);
+  padding: 0.8rem 1.1rem;
+  border: none;
+  border-radius: 1.5rem;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 5px rgb(88, 88, 88);
+  z-index: 2;
+}
+.button:hover {
+  box-shadow: 0px 0px 15px rgb(88, 88, 88);
+}
+
+.worldwar1 {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  background-image: url(./img/airplane.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.worldwar2 {
+  position: relative;
+  height: auto;
+  min-height: 100vh;
+  background-image: url(./img/airplane.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.worldwar1 .explanation,
+.worldwar2 .explanation {
+  width: 80%;
+  margin-left: 15px;
+  padding-bottom: 40px;
+}
+.worldwar1 .video {
+  position: absolute;
+  /* border: 1px solid red; */
+
+  height: 30vw;
+  width: 50vw;
+  top: 30vh;
+  right: 10px;
+}
+.worldwar1 iframe {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px black;
+}
+.worldwar1 h2,
+.worldwar2 h2 {
+  font-size: 5vw;
+  padding: 20px 0px 0px 15px;
+}
+.worldwar1 h3,
+.worldwar2 h3 {
+  font-size: 1.5vw;
+  margin: 0;
+  padding: 0px 0px 0px 20px;
+}
+.worldwar1 h5,
+.worldwar2 h5 {
+  font-size: 1rem;
+  padding-top: 10px;
+}
+.worldwar1 a,
+.worldwar2 a {
+  display: block;
+  margin-top: 2vh;
+  color: blue;
+  font-size: 1.1rem;
+}
+.worldwar2 .video {
+  position: absolute;
+  /* border: 1px solid red; */
+
+  height: 27vw;
+  width: 46vw;
+  top: 30vh;
+  right: 10px;
+}
+.worldwar2 iframe {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 0px 10px black;
+}
+.worldwar2 .explanation {
+  padding-bottom: 100px;
+}
+footer {
+  /* position: relative; */
+  position: absolute;
+  height: 10vh;
+  width: 100%;
+  background-color: black;
+  border-top-left-radius: 150%;
+  border-top-right-radius: 150%;
+  bottom: 0vh;
+  margin-top: 100px;
+}
+footer span {
+  position: absolute;
+  color: rgb(184, 184, 184);
+  display: block;
+  width: 100%;
+  text-align: center;
+  bottom: 15px;
+}
+@media screen and (max-width: 768px) {
+  .navmenu {
+    position: fixed;
+    /* top: 3rem; */
+    right: -100%;
+    width: 80%;
+    height: 100%;
+    padding: 4rem 2rem;
+    background-color: black;
+    transition: 0.5s;
+    z-index: 100;
+  }
+  .navlist {
+    flex-direction: column;
+    /* border: 1px solid red; */
+    width: 100%;
+  }
+  .navitem {
+    margin-bottom: 2rem;
+    width: 100%;
+    /* border: 1px solid white; */
+  }
+  .navitem:hover {
+    background-color: rgb(26, 26, 26);
+  }
+  .navlink {
+    /* position: relative; */
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+  .navtoggle {
+    position: fixed;
+    display: block;
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer;
+    /* padding-left: 20px; */
+    z-index: 100;
+  }
+  .navmenu.show .navtoggle i {
+    color: white;
+  }
+  .show {
+    right: 0;
+  }
+  .navmenu span {
+    display: block;
+    width: 100%;
+
+    text-align: center;
+    margin-top: 47vh;
+  }
+  .main .overlay h1 {
+    font-size: 15vw;
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no repeat;
+    line-height: 15vw;
+  }
+  .worldwar1 {
+    display: flex;
+    flex-direction: column;
+  }
+  .worldwar2 {
+    display: flex;
+    flex-direction: column;
+  }
+  .worldwar1 h2,
+  .worldwar2 h2 {
+    font-size: 3.7rem;
+    /* padding: 20px 0px 0px 15px; */
+  }
+  .worldwar1 h3,
+  .worldwar2 h3 {
+    font-size: 1rem;
+    /* margin: 0;
+    padding: 0px 0px 0px 20px; */
+  }
+  .worldwar1 .video {
+    position: relative;
+    top: 0vh;
+    width: 90vw;
+    margin: 0vw 5vw 5vw 5vw;
+    height: auto;
+  }
+  .worldwar1 iframe {
+    height: 50vh;
+    width: 100%;
+  }
+  .worldwar2 .video {
+    position: relative;
+    top: 0vh;
+    width: 90vw;
+    margin: 0vw 5vw 20vh 5vw;
+
+    height: auto;
+  }
+  .worldwar2 iframe {
+    height: 50vh;
+    width: 100%;
+  }
+  .worldwar2 .explanation {
+    padding-bottom: 40px;
+  }
+}
